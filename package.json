@@ -1,0 +1,49 @@
+{
+  "name": "eslint-config-joelpurra",
+  "version": "0.0.0",
+  "description": "Opinionated shareable linting configuration for Javascript/Typescript. By and for Joel Purra.",
+  "homepage": "https://joelpurra.com/projects/eslint-config-joelpurra/",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run --silent lint",
+    "lint": "npm run --silent xo && npm run --silent lint:copyright",
+    "lint:fix": "npm run --silent xo:fix",
+    "lint:copyright": "find . -not \\( -path './.git/*' -or -path './node_modules/*' \\) -type f -iname '*.js' -print0 | xargs -0 grep -L 'This file is part of eslint-config-joelpurra' | sed 's/^/File is missing copyright notice: /'",
+    "xo": "xo",
+    "xo:fix": "xo --fix"
+  },
+  "dependencies": {
+    "eslint-config-xo": "^0.32.1",
+    "eslint-config-xo-typescript": "^0.32.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3"
+  },
+  "devDependencies": {
+    "xo": "^0.33.0"
+  },
+  "peerDependencies": {
+    "xo": "^0.33.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint-rules",
+    "xo",
+    "xo-config"
+  ],
+  "bugs": {
+    "url": "https://github.com/joelpurra/eslint-config-joelpurra/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelpurra/eslint-config-joelpurra.git"
+  },
+  "author": {
+    "name": "Joel Purra",
+    "email": "mig@joelpurra.se",
+    "url": "https://joelpurra.com/"
+  },
+  "license": "MIT"
+}
