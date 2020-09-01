@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-joelpurra",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Opinionated shareable linting configuration for Javascript/Typescript. By and for Joel Purra.",
   "homepage": "https://joelpurra.com/projects/eslint-config-joelpurra/",
   "main": "index.js",
