@@ -1,6 +1,3 @@
-const sharedPlugins = () =>
-	[
-		"simple-import-sort",
-	];
+const sharedPlugins = () => [];
 
 module.exports = sharedPlugins;

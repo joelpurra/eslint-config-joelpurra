@@ -66,7 +66,6 @@ const sharedRules = () => ({
 		"error",
 		"double",
 	],
-	"simple-import-sort/sort": "error",
 	"sort-keys": "error",
 	"spaced-comment": "off",
 });
