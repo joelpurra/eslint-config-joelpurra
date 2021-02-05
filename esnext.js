@@ -35,4 +35,8 @@ module.exports = {
 	"extends": [
 		join(__dirname, "index.js"),
 	],
+	rules: {
+		"import/first": "error",
+		"import/newline-after-import": "error",
+	},
 };
