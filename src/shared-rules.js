@@ -36,7 +36,6 @@ const sharedRules = () => ({
 			allowIndentationTabs: true,
 		},
 	],
-	"no-unused-vars": "warn",
 	"no-useless-concat": "error",
 	"no-warning-comments": "off",
 	"object-curly-newline": [

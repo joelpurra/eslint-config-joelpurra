@@ -46,6 +46,7 @@ module.exports = {
 					fixToUnknown: true,
 				},
 			],
+			"@typescript-eslint/no-unused-vars": "off",
 			"@typescript-eslint/prefer-readonly": "error",
 			"@typescript-eslint/prefer-readonly-parameter-types": [
 				"error",
