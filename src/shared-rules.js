@@ -27,6 +27,7 @@ const sharedRules = () => ({
 		"error",
 		"consistent",
 	],
+	"import/order": "error",
 	"no-console": "error",
 	"no-sync": "error",
 	"no-tabs": [
@@ -66,7 +67,6 @@ const sharedRules = () => ({
 		"error",
 		"double",
 	],
-	"simple-import-sort/sort": "error",
 	"sort-keys": "error",
 	"spaced-comment": "off",
 });
