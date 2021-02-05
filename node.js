@@ -25,12 +25,10 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const {
-	join,
-} = require("path");
+const path = require("path");
 
 module.exports = {
 	"extends": [
-		join(__dirname, "esnext.js"),
+		path.join(__dirname, "esnext.js"),
 	],
 };

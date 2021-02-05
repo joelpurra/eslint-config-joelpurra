@@ -27,13 +27,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 "use strict";
 
-const {
-	join,
-} = require("path");
+const path = require("path");
 
 module.exports = {
 	"extends": [
-		join(__dirname, "index.js"),
+		path.join(__dirname, "index.js"),
 	],
 	rules: {
 		"import/first": "error",
