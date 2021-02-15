@@ -25,16 +25,19 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-"use strict";
-
-const path = require("path");
+const sharedPlugins = require("./src/shared-plugins");
+const sharedRules = require("./src/shared-rules");
 
 module.exports = {
 	"extends": [
-		path.join(__dirname, "index.js"),
+		// NOTE: for some reason, extending files from this repository (such as ./esnext.js)
+		// does not work as expected. Using shared functions instead.
+		"xo",
+		"xo/browser",
 	],
+	plugins: sharedPlugins(),
 	rules: {
-		"import/first": "error",
-		"import/newline-after-import": "error",
+		...sharedRules(),
+		...{},
 	},
 };

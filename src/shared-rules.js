@@ -27,6 +27,8 @@ const sharedRules = () => ({
 		"error",
 		"consistent",
 	],
+	"import/extensions": "off",
+	"import/order": "error",
 	"no-console": "error",
 	"no-sync": "error",
 	"no-tabs": [
@@ -35,7 +37,6 @@ const sharedRules = () => ({
 			allowIndentationTabs: true,
 		},
 	],
-	"no-unused-vars": "warn",
 	"no-useless-concat": "error",
 	"no-warning-comments": "off",
 	"object-curly-newline": [
@@ -66,7 +67,6 @@ const sharedRules = () => ({
 		"error",
 		"double",
 	],
-	"simple-import-sort/sort": "error",
 	"sort-keys": "error",
 	"spaced-comment": "off",
 });

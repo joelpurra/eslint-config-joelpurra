@@ -39,6 +39,10 @@ module.exports = {
 	rules: {
 		...sharedRules(),
 		...{
+			"@typescript-eslint/comma-dangle": [
+				"error",
+				"always-multiline",
+			],
 			"@typescript-eslint/explicit-module-boundary-types": "error",
 			"@typescript-eslint/no-explicit-any": [
 				"error",
@@ -46,6 +50,7 @@ module.exports = {
 					fixToUnknown: true,
 				},
 			],
+			"@typescript-eslint/no-unused-vars": "off",
 			"@typescript-eslint/prefer-readonly": "error",
 			"@typescript-eslint/prefer-readonly-parameter-types": [
 				"error",
