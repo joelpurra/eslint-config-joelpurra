@@ -18,7 +18,10 @@
     "eslint-config-xo-typescript": "^0.37.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "xo": "0.37.1"
+    "xo": "^0.37.1"
+  },
+  "devDependencies": {
+    "husky": "^4.3.8"
   },
   "peerDependencies": {
     "xo": "^0.37.1"
@@ -45,5 +48,11 @@
     "email": "mig@joelpurra.se",
     "url": "https://joelpurra.com/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run --silent test",
+      "pre-push": "npm run --silent test"
+    }
+  }
 }
