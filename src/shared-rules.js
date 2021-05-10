@@ -94,6 +94,8 @@ const sharedRules = () => ({
 		"error",
 		"double",
 	],
+	"simple-import-sort/exports": "error",
+	"simple-import-sort/imports": "error",
 	"sort-keys": "error",
 	"spaced-comment": "off",
 });
