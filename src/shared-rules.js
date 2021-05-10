@@ -55,7 +55,7 @@ const sharedRules = () => ({
 		"consistent",
 	],
 	"import/extensions": "off",
-	"import/order": "error",
+	"import/order": "off",
 	"no-console": "error",
 	"no-sync": "error",
 	"no-tabs": [
