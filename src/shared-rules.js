@@ -69,7 +69,16 @@ const sharedRules = () => ({
 	"object-curly-newline": [
 		"error",
 		{
-			minProperties: 1,
+			ExportDeclaration: "always",
+			ImportDeclaration: "always",
+			ObjectExpression: {
+				consistent: true,
+				minProperties: 1,
+			},
+			ObjectPattern: {
+				consistent: true,
+				minProperties: 1,
+			},
 		},
 	],
 	"object-curly-spacing": [
