@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-joelpurra",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Opinionated shareable linting configuration for Javascript/Typescript. By and for Joel Purra.",
   "homepage": "https://joelpurra.com/projects/eslint-config-joelpurra/",
   "main": "index.js",
@@ -18,6 +18,7 @@
     "eslint-config-xo-typescript": "^0.40.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "xo": "^0.39.1"
   },
   "devDependencies": {
