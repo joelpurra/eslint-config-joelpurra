@@ -25,13 +25,43 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = require("./src/shared-plugins");
-const sharedRules = require("./src/shared-rules");
+const sharedPlugins = require("./src/shared-plugins.cjs");
+const sharedRules = require("./src/shared-rules.cjs");
 
 module.exports = {
 	"extends": [
+		// NOTE: for some reason, extending files from this repository (such as ./esnext.cjs)
+		// does not work as expected. Using shared functions instead.
 		"xo",
+		"xo-typescript",
 	],
 	plugins: sharedPlugins(),
-	rules: sharedRules(),
+	rules: {
+		...sharedRules(),
+		...{
+			"@typescript-eslint/comma-dangle": [
+				"error",
+				"always-multiline",
+			],
+			"@typescript-eslint/explicit-module-boundary-types": "error",
+			"@typescript-eslint/no-explicit-any": [
+				"error",
+				{
+					fixToUnknown: true,
+				},
+			],
+			"@typescript-eslint/no-unused-vars": "off",
+			"@typescript-eslint/prefer-readonly": "error",
+			"@typescript-eslint/prefer-readonly-parameter-types": [
+				"error",
+				{
+					checkParameterProperties: false,
+				},
+			],
+			"@typescript-eslint/quotes": [
+				"error",
+				"double",
+			],
+		},
+	},
 };

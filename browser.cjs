@@ -25,12 +25,12 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = require("./src/shared-plugins");
-const sharedRules = require("./src/shared-rules");
+const sharedPlugins = require("./src/shared-plugins.cjs");
+const sharedRules = require("./src/shared-rules.cjs");
 
 module.exports = {
 	"extends": [
-		// NOTE: for some reason, extending files from this repository (such as ./esnext.js)
+		// NOTE: for some reason, extending files from this repository (such as ./esnext.cjs)
 		// does not work as expected. Using shared functions instead.
 		"xo",
 		"xo/browser",

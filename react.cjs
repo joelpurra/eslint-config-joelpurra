@@ -25,16 +25,32 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-"use strict";
-
-const path = require("path");
+const sharedPlugins = require("./src/shared-plugins.cjs");
+const sharedRules = require("./src/shared-rules.cjs");
 
 module.exports = {
 	"extends": [
-		path.join(__dirname, "index.js"),
+		// NOTE: for some reason, extending files from this repository (such as ./esnext.cjs)
+		// does not work as expected. Using shared functions instead.
+		"xo",
+		"xo-react",
 	],
+	plugins: sharedPlugins(),
 	rules: {
-		"import/first": "error",
-		"import/newline-after-import": "error",
+		...sharedRules(),
+		...{
+			"react/jsx-max-props-per-line": [
+				"error",
+			],
+			"react/jsx-one-expression-per-line": "error",
+			"react/jsx-sort-props": [
+				"error",
+				{
+					callbacksLast: true,
+					reservedFirst: true,
+					shorthandFirst: true,
+				},
+			],
+		},
 	},
 };
