@@ -25,10 +25,13 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const path = require("path");
+const sharedPlugins = require("./src/shared-plugins.cjs");
+const sharedRules = require("./src/shared-rules.cjs");
 
 module.exports = {
 	"extends": [
-		path.join(__dirname, "esnext.js"),
+		"xo",
 	],
+	plugins: sharedPlugins(),
+	rules: sharedRules(),
 };
