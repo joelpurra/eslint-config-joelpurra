@@ -38,30 +38,28 @@ module.exports = {
 	plugins: sharedPlugins(),
 	rules: {
 		...sharedRules(),
-		...{
-			"@typescript-eslint/comma-dangle": [
-				"error",
-				"always-multiline",
-			],
-			"@typescript-eslint/explicit-module-boundary-types": "error",
-			"@typescript-eslint/no-explicit-any": [
-				"error",
-				{
-					fixToUnknown: true,
-				},
-			],
-			"@typescript-eslint/no-unused-vars": "off",
-			"@typescript-eslint/prefer-readonly": "error",
-			"@typescript-eslint/prefer-readonly-parameter-types": [
-				"error",
-				{
-					checkParameterProperties: false,
-				},
-			],
-			"@typescript-eslint/quotes": [
-				"error",
-				"double",
-			],
-		},
+		"@typescript-eslint/comma-dangle": [
+			"error",
+			"always-multiline",
+		],
+		"@typescript-eslint/explicit-module-boundary-types": "error",
+		"@typescript-eslint/no-explicit-any": [
+			"error",
+			{
+				fixToUnknown: true,
+			},
+		],
+		"@typescript-eslint/no-unused-vars": "off",
+		"@typescript-eslint/prefer-readonly": "error",
+		"@typescript-eslint/prefer-readonly-parameter-types": [
+			"error",
+			{
+				checkParameterProperties: false,
+			},
+		],
+		"@typescript-eslint/quotes": [
+			"error",
+			"double",
+		],
 	},
 };

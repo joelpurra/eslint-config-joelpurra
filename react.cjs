@@ -38,19 +38,17 @@ module.exports = {
 	plugins: sharedPlugins(),
 	rules: {
 		...sharedRules(),
-		...{
-			"react/jsx-max-props-per-line": [
-				"error",
-			],
-			"react/jsx-one-expression-per-line": "error",
-			"react/jsx-sort-props": [
-				"error",
-				{
-					callbacksLast: true,
-					reservedFirst: true,
-					shorthandFirst: true,
-				},
-			],
-		},
+		"react/jsx-max-props-per-line": [
+			"error",
+		],
+		"react/jsx-one-expression-per-line": "error",
+		"react/jsx-sort-props": [
+			"error",
+			{
+				callbacksLast: true,
+				reservedFirst: true,
+				shorthandFirst: true,
+			},
+		],
 	},
 };

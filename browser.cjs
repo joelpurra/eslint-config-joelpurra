@@ -38,6 +38,5 @@ module.exports = {
 	plugins: sharedPlugins(),
 	rules: {
 		...sharedRules(),
-		...{},
 	},
 };
