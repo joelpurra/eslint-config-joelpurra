@@ -56,6 +56,8 @@ const sharedRules = () => ({
 	],
 	"import/extensions": "off",
 	"import/order": "off",
+	"modules-newline/export-declaration-newline": "error",
+	"modules-newline/import-declaration-newline": "error",
 	"no-console": "error",
 	"no-sync": "error",
 	"no-tabs": [
