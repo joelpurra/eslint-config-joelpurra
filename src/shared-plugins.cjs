@@ -27,6 +27,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 const sharedPlugins = () => [
 	"modules-newline",
+	"promise",
 	"simple-import-sort",
 ];
 
