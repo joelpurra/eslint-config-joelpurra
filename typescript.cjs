@@ -38,6 +38,55 @@ module.exports = {
 	plugins: sharedPlugins(),
 	rules: {
 		...sharedRules(),
+		"@typescript-eslint/ban-types": [
+			// NOTE: copied and modified from upstream.
+			// https://github.com/xojs/eslint-config-xo-typescript/blob/main/index.js
+			"error",
+			{
+				extendDefaults: false,
+				types: {
+					Boolean: {
+						fixWith: "boolean",
+						message: "Use `boolean` instead.",
+					},
+					Function: "Use a specific function type instead, like `() => void`.",
+					Number: {
+						fixWith: "number",
+						message: "Use `number` instead.",
+					},
+					Object: {
+						fixWith: "Record<string, unknown>",
+						message: "The `Object` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead. See https://github.com/typescript-eslint/typescript-eslint/pull/848",
+					},
+					String: {
+						fixWith: "string",
+						message: "Use `string` instead.",
+					},
+					Symbol: {
+						fixWith: "symbol",
+						message: "Use `symbol` instead.",
+					},
+					"[[[[[]]]]]": "🦄💥",
+					"[[[[]]]]": "ur drunk 🤡",
+					"[[[]]]": "Don't use `[[[]]]`. Use `SomeType[][][]` instead.",
+					"[[]]": "Don't use `[[]]`. It only allows an array with a single element which is an empty array. Use `SomeType[][]` instead.",
+					"[]": "Don't use the empty array type `[]`. It only allows empty arrays. Use `SomeType[]` instead.",
+					// eslint-disable-next-line camelcase
+					_DISABLED_null: {
+						fixWith: "undefined",
+						message: "Use `undefined` instead. See: https://github.com/sindresorhus/meta/issues/7",
+					},
+					object: {
+						fixWith: "Record<string, unknown>",
+						message: "The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848",
+					},
+					"{}": {
+						fixWith: "Record<string, unknown>",
+						message: "The `{}` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead.",
+					},
+				},
+			},
+		],
 		"@typescript-eslint/comma-dangle": [
 			"error",
 			"always-multiline",
