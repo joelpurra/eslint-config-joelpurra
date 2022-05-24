@@ -38,6 +38,10 @@ module.exports = {
 	plugins: sharedPlugins(),
 	rules: {
 		...sharedRules(),
+		"jsx-quotes": [
+			"error",
+			"prefer-double",
+		],
 		"react/jsx-max-props-per-line": [
 			"error",
 		],
