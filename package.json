@@ -30,7 +30,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
-    "xo": "^0.55.1"
+    "xo": "^0.56.0"
   },
   "devDependencies": {
     "husky": "^4.3.8"
