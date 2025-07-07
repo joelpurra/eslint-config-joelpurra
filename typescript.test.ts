@@ -25,10 +25,5 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = () => [
-	"modules-newline",
-	"promise",
-	"simple-import-sort",
-];
-
-module.exports = sharedPlugins;
+const test = "abc";
+const tester = (): string => test;

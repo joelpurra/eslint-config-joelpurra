@@ -25,16 +25,8 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-"use strict";
+import defaultConfig from "./index.mjs";
 
-module.exports = {
-	extends: [
-		"./esnext.cjs",
-	],
-	overrides: [
-		{
-			files: "**/*.cjs",
-			"unicorn/prefer-module": "off"
-		},
-	],
-};
+const browserConfig = defaultConfig;
+
+export default browserConfig;

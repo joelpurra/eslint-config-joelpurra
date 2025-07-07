@@ -25,34 +25,60 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = require("./src/shared-plugins.cjs");
-const sharedRules = require("./src/shared-rules.cjs");
+import defaultConfig from "./index.mjs";
 
-module.exports = {
-	"extends": [
-		// NOTE: for some reason, extending files from this repository (such as ./esnext.cjs)
-		// does not work as expected. Using shared functions instead.
-		"xo",
-		"xo-react",
-	],
-	plugins: sharedPlugins(),
-	rules: {
-		...sharedRules(),
-		"jsx-quotes": [
-			"error",
-			"prefer-double",
-		],
-		"react/jsx-max-props-per-line": [
-			"error",
-		],
-		"react/jsx-one-expression-per-line": "error",
-		"react/jsx-sort-props": [
-			"error",
-			{
-				callbacksLast: true,
-				reservedFirst: true,
-				shorthandFirst: true,
-			},
-		],
+export const mjsExtensions = [
+	"cjs",
+	"mjs",
+];
+export const mjsFilesGlob = `**/*.{${mjsExtensions.join(",")}}`;
+
+const esNextConfig = [
+	...defaultConfig,
+	{
+		languageOptions: {
+			ecmaVersion: 2022,
+			sourceType: "module",
+		},
+		rules: {
+			// TODO: avoid mixing jsx/react rules with other rules; create react/typescript/react+typescript configs.
+			"@stylistic/jsx-quotes": [
+				"error",
+				"prefer-double",
+			],
+			"import-x/first": "error",
+			"import-x/newline-after-import": "error",
+			"import-x/no-duplicates": [
+				"error",
+				{
+					"prefer-inline": false,
+				},
+			],
+			"import-x/order": [
+				"error",
+				{
+					alphabetize: {
+						caseInsensitive: true,
+						order: "asc",
+						orderImportKind: "asc",
+					},
+					groups: [
+						"type",
+						"builtin",
+						"external",
+						"parent",
+						"sibling",
+						"index",
+					],
+					"newlines-between": "always",
+					sortTypesGroup: true,
+					warnOnUnassignedImports: true,
+				},
+			],
+			"n/no-extraneous-import": "off",
+			"react/jsx-no-leaked-render": "off",
+		},
 	},
-};
+];
+
+export default esNextConfig;

@@ -2,7 +2,7 @@
 
 Opinionated [shareable linting configuration](https://eslint.org/docs/developer-guide/shareable-configs) for Javascript/Typescript. By and for [Joel Purra](https://joelpurra.com/).
 
-Usage and rules based on [XO](https://github.com/xojs/xo), a useful [ESLint](https://eslint.org/) wrapper. Uses [TypeScript ESLint](https://github.com/typescript-eslint).
+[ESLint](https://eslint.org/) rules based on [XO](https://github.com/xojs/xo). Uses [TypeScript ESLint](https://github.com/typescript-eslint). For plain javascript, esnext, browser, react, typescript projects.
 
 ---
 

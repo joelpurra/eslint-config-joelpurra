@@ -25,12 +25,29 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-module.exports = {
-	"extends": [
-		"./index.cjs",
-	],
-	rules: {
-		"import/first": "error",
-		"import/newline-after-import": "error",
+import esNextConfig from "./esnext.mjs";
+
+const reactConfig = [
+	...esNextConfig,
+	{
+		files: [
+			"**/*.tsx",
+		],
+		rules: {
+			"react/jsx-max-props-per-line": [
+				"error",
+			],
+			"react/jsx-one-expression-per-line": "error",
+			"react/jsx-sort-props": [
+				"error",
+				{
+					callbacksLast: true,
+					reservedFirst: true,
+					shorthandFirst: true,
+				},
+			],
+		},
 	},
-};
+];
+
+export default reactConfig;
