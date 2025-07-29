@@ -32,7 +32,7 @@
     "husky": "^4.3.8"
   },
   "peerDependencies": {
-    "eslint": "$eslint"
+    "eslint": "^9.32.0"
   },
   "engines": {
     "node": "^22.0.0 || ^24.0.0"
