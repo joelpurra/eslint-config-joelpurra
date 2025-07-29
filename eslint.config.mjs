@@ -3,7 +3,7 @@ This file is part of eslint-config-joelpurra -- Opinionated shareable configurat
 
 MIT License:
 
-Copyright (c) 2015, 2016, 2017, 2018, 2019, 2020 Joel Purra <https://joelpurra.com/>
+Copyright (c) 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Joel Purra <https://joelpurra.com/>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -25,18 +25,8 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = require("./src/shared-plugins.cjs");
-const sharedRules = require("./src/shared-rules.cjs");
+import esNextConfig from "./esnext.mjs";
 
-module.exports = {
-	"extends": [
-		// NOTE: for some reason, extending files from this repository (such as ./esnext.cjs)
-		// does not work as expected. Using shared functions instead.
-		"xo",
-		"xo/browser",
-	],
-	plugins: sharedPlugins(),
-	rules: {
-		...sharedRules(),
-	},
-};
+const eslintConfig = esNextConfig;
+
+export default eslintConfig;

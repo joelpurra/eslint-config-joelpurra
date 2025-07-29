@@ -3,7 +3,7 @@ This file is part of eslint-config-joelpurra -- Opinionated shareable configurat
 
 MIT License:
 
-Copyright (c) 2015, 2016, 2017, 2018, 2019, 2020 Joel Purra <https://joelpurra.com/>
+Copyright (c) 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Joel Purra <https://joelpurra.com/>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -25,10 +25,5 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-const sharedPlugins = () => [
-	"modules-newline",
-	"promise",
-	"simple-import-sort",
-];
-
-module.exports = sharedPlugins;
+const test = "abc";
+const tester = (): string => test;
